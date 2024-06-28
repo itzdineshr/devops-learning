@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#This script displays users with read access to the Github repository
+
+helper
+
 # GitHub API URL
 API_URL="https://api.github.com"
 
@@ -35,6 +39,15 @@ function list_users_with_read_access {
         echo "$collaborators"
     fi
 }
+
+#Helper function
+function helper{
+args_count=2
+if [[ $# -ne args_count ]]; then
+echo "Arguments count mismatch"
+fi
+}
+
 
 # Main script
 
